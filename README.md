@@ -1,29 +1,29 @@
 # School Performance Prediction
 
-Welcome, mate! This project is all about **cleaning** and **transforming** a dataset of schools, ultimately helping us **predict** their performance.
+Welcome, mate! This project focuses on **cleaning** and **transforming** a dataset of schools to ultimately help us **predict** their performance.
 
 ## Table of Contents
 
-- [Overview](#overview)  
-- [Data Source](#data-source)  
-- [Preprocessing](#preprocessing)  
-- [Generated Files](#generated-files)  
-- [How to Run](#how-to-run)  
-- [Project Structure](#project-structure)  
-- [Contributing](#contributing)  
+- [Overview](#overview)
+- [Data Source](#data-source)
+- [Preprocessing](#preprocessing)
+- [Generated Files](#generated-files)
+- [Installation](#installation)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
 - [License](#license)
 
 ---
 
 ## Overview
 
-We start with a **raw dataset** that includes:
+We start with a **raw dataset** containing:
 - **School Name, City**  
 - **Academic Details** (Math Score, English Score, National & State Ranks)  
-- **Demographic Info** (Race %, Offers Electives, etc.)  
-- **School Type** (Public or Private)
+- **Demographics** (Race %, AP Classes, Electives, etc.)  
+- **School Type** (Public or Private)  
 
-We then clean, transform, and prepare the data for potential **ML** or **predictive** tasks.
+We then **clean, transform, and prepare** the data for **ML** or **predictive** analyses.
 
 ---
 
@@ -36,18 +36,26 @@ We then clean, transform, and prepare the data for potential **ML** or **predict
 
 ## Preprocessing
 
-1. **Load Data**: Reads `Final Raw Data.csv` into a DataFrame.  
-2. **Clean Missing Values**:  
-   - Drops columns with the most missing values.  
-   - Drops rows with **any** missing values remaining.  
-3. **Invalid Ranks**: Filters out placeholders like `"unranked"`, `"Not found"`, `"na"`.  
-4. **Remove Duplicates**: By `School Name` + `City`.  
-5. **Transform**:  
-   - Removes special characters (`$`, `%`) from numeric columns.  
-   - Converts `Yes`/`No` columns to binary `1`/`0`.  
-6. **Save**:  
-   - Creates `cleaned_and_transformed.csv`  
-   - Further transformations → `transformed_data.csv`
+1. **Load Data**  
+   - Read `Final Raw Data.csv` into a Pandas DataFrame.
+
+2. **Clean Missing Values**  
+   - Drop columns with the most missing values.  
+   - Drop rows with any remaining missing values.
+
+3. **Filter Invalid Ranks**  
+   - Remove rows with “unranked”, “Not found”, or “na”.
+
+4. **Remove Duplicates**  
+   - Identify duplicates by `School Name + City` and keep the first occurrence.
+
+5. **Transform**  
+   - Remove special characters (`$`, `%`) from numeric columns.  
+   - Convert `Yes/No` columns to **binary** `1/0`.
+
+6. **Save**  
+   - Export preprocessed data as `cleaned_and_transformed.csv`.  
+   - Generate `transformed_data.csv` with further binary conversions, etc.
 
 > **Note**: We **do not commit** these final CSV files to GitHub. They’re generated locally on your machine!
 
@@ -55,30 +63,32 @@ We then clean, transform, and prepare the data for potential **ML** or **predict
 
 ## Generated Files
 
-- **`cleaned_and_transformed.csv`**: After dropping missing values, duplicates, special chars.  
-- **`transformed_data.csv`**: Final, with `Yes/No → 1/0`.
+- **`cleaned_and_transformed.csv`**  
+  Contains partially cleaned data (no missing values, duplicates removed, special chars removed).
 
-Neither is included in the repo, so you won’t see them on GitHub. If you want them in your remote repo, just remove them from `.gitignore` or manually upload.
+- **`transformed_data.csv`**  
+  Final file with additional transformations (binary columns, etc.).
+
+These files are **not** committed to the repo by default. If you want them on GitHub, remove them from `.gitignore` or upload manually.
 
 ---
-
-
-
 
 ## Installation
 
 1. **Clone the repository** (or download the ZIP):
+
    ```bash
    git clone https://github.com/YourUsername/School-Performance-Prediction.git
    cd School-Performance-Prediction
+
 2. **Create and activate a virtual environment** (optional but recommended):
-   
-   python -m venv venv
-   source venv/bin/activate  # On Mac/Linux
-  # or
-  ```bash
-    venv\Scripts\activate     # On Windows
-3. **Install the required dependencies:**
+
    ```bash
-   pip install pandas numpy
+   # On Mac/Linux:
+   python -m venv venv
+   source venv/bin/activate
+
+   # On Windows:
+   python -m venv venv
+   venv\Scripts\activate
 
