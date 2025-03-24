@@ -81,10 +81,4 @@ Neither is included in the repo, so you won’t see them on GitHub. If you want 
 3. **Install the required dependencies:**
    ```bash
    pip install pandas numpy
-4. **Check New CSV Files:**(in your local folder)
-After running the preprocessing script or notebook, you’ll see:
 
-- **cleaned_and_transformed.csv**
-- **transformed_data.csv**
-
-These files are generated locally and are not included in the repository by default.
