@@ -1,59 +1,69 @@
-# 🎓 School Performance Prediction
+# 🏫 School Performance Prediction
 
-A machine learning project to analyze and predict school performance using educational indicators.
+This project aims to predict and analyze school performance across Arizona using various features such as academic scores, racial demographics, school resources, and course offerings.
 
-## 📁 Project Contents
+---
 
-- `Final Raw Data (1).csv` – Main dataset
-- `Pre-Processing.ipynb` – Data cleaning and transformation
-- `School Performance Prediction.ipynb` – EDA, model building, evaluation
+## 📂 Dataset Overview
 
-## 🎯 Objective
+- **Source File**: `Final Raw Data (1).csv`
+- **Total Entries**: 481 schools
+- **Columns**:
+  - `School Name`, `City`
+  - Course Offerings: `AP Classes?`, `Dual Enrollment?`, `Offers Electives?`
+  - Performance: `Math Score`, `English Score`, `National Rank`, `AZ Rank`
+  - Demographics: `Racial%-White`, `Racial%-Black`, `Racial%-Native`, `Racial%-Hispanic`, `Racial%-Asian`, `Racial%-Other`
+  - School Info: `student_faculty_ratio`, `school_type`
 
-To build predictive models for school performance and analyze key factors like funding, infrastructure, and past scores.
+---
 
-## 🧰 Tools & Libraries
+## ⚙️ Preprocessing
 
-- Python 3.x
-- Jupyter Notebook
-- pandas, numpy
-- matplotlib, seaborn
-- scikit-learn
+- Cleaning categorical inconsistencies (`Yes` vs `yes`)
+- Converting scores/ranks to numerical values
+- Handling missing values appropriately
+- Encoding categorical features for modeling
 
-## 🧼 Preprocessing Steps
+> ✅ **Note**: After running the `Pre-Processing.ipynb` notebook, a new preprocessed CSV file will be generated which is then used for modeling and analysis.
 
-`Pre-Processing.ipynb` handles:
-- Removing nulls and duplicates
-- Encoding categorical data
-- Feature normalization
+---
 
-## 📊 Exploratory Data Analysis
+## 📁 Project Structure
 
-`School Performance Prediction.ipynb` includes:
-- Correlation heatmaps
-- Feature-target visualizations
-- Value distributions
+```
+School Performance Prediction/
+├── Final Raw Data (1).csv             # Original dataset
+├── Pre-Processing.ipynb               # Notebook for cleaning & preprocessing
+├── School Performance Prediction.ipynb# Analysis, visualization, and modeling
+├── README.md                          # This file
+└── .git/                              # Git versioning folder
+```
 
-## 🤖 Models Implemented
+---
 
-- Linear Regression
-- Random Forest Regressor
-- Decision Tree Regressor
-- K-Nearest Neighbors
+## 📊 Objectives
 
-## 📈 Evaluation Metrics
+- Analyze correlations between performance and various features.
+- Predict key outcomes like rank or score using regression/classification models.
+- Explore how school offerings or demographics affect academic performance.
 
-- R² Score
-- Mean Squared Error (MSE)
-- Mean Absolute Error (MAE)
+---
 
-## ✅ Best Performing Model
+## 🚀 Getting Started
 
-Random Forest showed the highest R² score and lowest error, making it the most accurate predictor.
+To run this project:
+1. Open `Pre-Processing.ipynb` to clean the data and generate a new CSV.
+2. Use the cleaned file in `School Performance Prediction.ipynb` to train models and visualize insights.
 
-## ▶️ How to Run the Project
+---
 
-1. Clone the repository:
-```bash
-git clone <repo-url>
-cd School-Performance-Prediction
+## 🧠 Future Enhancements
+
+- Add more robust imputations or outlier handling
+- Explore feature engineering with derived metrics
+- Try ensemble models for better prediction
+
+---
+
+**Author**: *(Soham Patel)*  
+**Last Updated**: March 2025
