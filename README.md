@@ -25,14 +25,10 @@ We start with a **raw dataset** containing:
 
 We then **clean, transform, and prepare** the data for **ML** or **predictive** analyses.
 
----
-
 ## Data Source
 
 - **`Final Raw Data.csv`**  
   A 481×17 CSV with missing values, duplicates, special characters, and unranked placeholders.
-
----
 
 ## Preprocessing
 
@@ -69,9 +65,7 @@ We then **clean, transform, and prepare** the data for **ML** or **predictive** 
 - **`transformed_data.csv`**  
   Final file with additional transformations (binary columns, etc.).
 
-These files are **not** committed to the repo by default. If you want them on GitHub, remove them from `.gitignore` or upload manually.
-
----
+These files are **not** committed to the repo by default. If you want them on GitHub, remove them from `.gitignore` or upload manually.-
 
 ## Installation
 
