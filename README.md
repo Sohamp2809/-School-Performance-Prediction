@@ -92,3 +92,45 @@ These files are **not** committed to the repo by default. If you want them on Gi
    python -m venv venv
    venv\Scripts\activate
 
+3. **Install the required dependencies:**
+
+  ```bash
+  pip install pandas numpy
+
+Or, if a `requirements.txt` file is provided:
+
+```bash
+pip install -r requirements.txt
+
+
+## Project Structure
+
+```bash
+School-Performance-Prediction/
+├── Final Raw Data.csv
+├── .gitignore
+├── README.md
+├── <your_preprocessing_notebook_or_script>.ipynb   # or .py script
+└── ...
+
+## Contributing
+
+1. **Fork** this repository.
+
+2. **Create** a feature branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+
+3. **Commit** your changes:
+   ```bash
+   git commit -m "Add your feature description"
+
+4. **Push** to your branch:
+   ```bash
+   git push origin feature/your-feature-name
+
+5. **Open a Pull Request** on GitHub.
+
+
+
+
