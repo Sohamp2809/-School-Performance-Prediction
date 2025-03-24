@@ -72,7 +72,7 @@ Neither is included in the repo, so you won’t see them on GitHub. If you want 
    git clone https://github.com/YourUsername/School-Performance-Prediction.git
    cd School-Performance-Prediction
 2. **Create and activate a virtual environment** (optional but recommended):
-   ```bash
+   
    python -m venv venv
    source venv/bin/activate  # On Mac/Linux
   # or
