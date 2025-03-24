@@ -74,13 +74,17 @@ Neither is included in the repo, so you won’t see them on GitHub. If you want 
 2. **Create and activate a virtual environment** (optional but recommended):
    ```bash
    python -m venv venv
-    source venv/bin/activate  # On Mac/Linux
+   source venv/bin/activate  # On Mac/Linux
   # or
+  ```bash
     venv\Scripts\activate     # On Windows
 3. **Install the required dependencies:**
    ```bash
    pip install pandas numpy
 4. **Check New CSV Files:**(in your local folder)
-  -cleaned_and_transformed.csv
-  -transformed_data.csv
+After running the preprocessing script or notebook, you’ll see:
 
+- **cleaned_and_transformed.csv**
+- **transformed_data.csv**
+
+These files are generated locally and are not included in the repository by default.
